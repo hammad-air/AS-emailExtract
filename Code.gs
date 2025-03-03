@@ -1,6 +1,6 @@
 function extractEmailsToSheet() {
   var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
-  var label = GmailApp.getUserLabelByName("hammad@internee.pk"); // Change label to an actual one
+  var label = GmailApp.getUserLabelByName(""); // Change label to an actual one
 
   // Check if label exists
   if (!label) {
@@ -19,7 +19,7 @@ function extractEmailsToSheet() {
     sheet.appendRow(["Date", "From", "Subject", "Snippet", "Attachment Links"]);
   }
 
-  var folder = DriveApp.getFolderById("1bHXdHSZZUmgG0MXtyJh99mWedeEB_6aK"); // Change to your Drive folder ID
+  var folder = DriveApp.getFolderById(""); // Change to your Drive folder ID
 
   for (var i = 0; i < threads.length; i++) {
     var messages = threads[i].getMessages();
